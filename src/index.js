@@ -6,6 +6,8 @@
 //Web API
 const baseUrl = 'https://platzi-avo.vercel.app';
 const url = `${baseUrl}/api/avo`;
+const appContainer = document.querySelector('#app');
+appContainer.className = 'flex flex-row'
 
 // Intl
 function formatPrice(price){
@@ -42,7 +44,5 @@ window
             allItems.push(container);
         });
 
-        document.querySelector('#app').append(...allItems);
-    })
-
-
+        appContainer.append(...allItems);
+    });
