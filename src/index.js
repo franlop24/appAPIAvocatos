@@ -7,7 +7,7 @@
 const baseUrl = 'https://platzi-avo.vercel.app';
 const url = `${baseUrl}/api/avo`;
 const appContainer = document.querySelector('#app');
-appContainer.className = 'flex flex-row'
+appContainer.className = "text-center"
 
 // Intl
 function formatPrice(price){
@@ -39,6 +39,7 @@ window
             price.textContent = formatPrice(item.price);
             
             const container = document.createElement('div');
+            container.className = "bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 cardfr place-content-center"
             container.append(image, title, price);
 
             allItems.push(container);
