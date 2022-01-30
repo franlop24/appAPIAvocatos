@@ -8,6 +8,11 @@ const baseUrl = 'https://platzi-avo.vercel.app';
 const url = `${baseUrl}/api/avo`;
 const appContainer = document.querySelector('#app');
 appContainer.className = "text-center"
+appContainer.addEventListener('click', (event)=> {
+    if(event.target.nodeName === "H1"){
+        window.alert(event.target.nodeName);
+    }
+})
 
 // Intl
 function formatPrice(price){
